@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import SnakeGame from './game/SnakeGame';
 
 function App() {
   return (
     <div className="App">
+      <SnakeGame />
     </div>
   );
 }
