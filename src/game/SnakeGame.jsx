@@ -49,6 +49,35 @@ export default function SnakeGame() {
         setApple({ Xpos: appleXpos, Ypos: appleYpos});
     }
 
+    const gameLoop = () => {
+        let timeoutId = setTimeout(() => {
+            if(isGameOver) {
+                // [TODO] Implement game over criteria
+            }
+
+            // Implement gameLoopTimeout
+        })
+        
+        // Set the new timeout ID, this will change
+    }
+
+    const moveSnake = () => {
+        let previousPartX = snake[0].Xpos;
+        let previousPartY = snake[0].Ypos;
+        let tmpPartX = previousPartX;
+        let tmpPartY = previousPartY;
+        moveHead();
+        for (let i =1; i < snake.length; i++) {
+            tmpPartX = snake[i].Xpos;
+            tmpPartY = snake[i].Ypos;
+            snake[i].Xpos = previousPartX;
+            snake[i].Ypos = previousPartY;
+            previousPartX = tmpPartX;
+            previousPartY = tmpPartY;
+        }
+        setSnake({ snake });
+    }
+
 
 
     return (
